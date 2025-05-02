@@ -1,0 +1,23 @@
+{
+  "name": "mini-projeto-javascript",
+  "version": "1.0.0",
+  "description": "Mini Projeto JavaScript G Tech",
+  "main": "index.js",
+  "scripts": {
+    "api": "npx json-server --watch api.json --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniolivem/mini-projeto-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniolivem/mini-projeto-javascript/issues"
+  },
+  "homepage": "https://github.com/daniolivem/mini-projeto-javascript#readme",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
