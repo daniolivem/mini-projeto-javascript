@@ -9,6 +9,11 @@
     padding: 0;
 }
 
+body {
+    background-color: #efefefef;
+    
+}
+
 header {
     background-color: bisque;
     padding: 16px 120px;
@@ -57,6 +62,38 @@ header input {
     color: #999;
 }
 
+#tarefas ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 36px;
+}
+
+#tarefas ul li {
+    width: calc(25% - 16px);
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#tarefas ul li h5 {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+#tarefas ul li .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    cursor: pointer;
+    fill: #999;
+}
+
+#tarefas ul li .actions:hover {
+    fill: burlywood;
+}
+
 #overlay {
     width: 100%;
     height: 100%;
@@ -65,6 +102,14 @@ header input {
     left: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 200ms;
+}
+
+#overlay.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .modal {
@@ -77,12 +122,32 @@ header input {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 200ms;
+}
+
+.modal.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .modal form h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 24px;
     color: #999;
     margin-bottom: 26px;
+}
+
+.modal form h3 box-icon {
+    fill: #999;
+    cursor: pointer;
+    
+}
+.modal form h3 box-icon:hover {
+    fill:burlywood;
 }
 
 .modal form label {
