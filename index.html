@@ -1,39 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<!-- Declaração do tipo de documento HTML e definição do idioma como português do Brasil -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura o viewport para garantir que o layout seja responsivo em dispositivos móveis -->
+
     <title>Lista de Tarefas</title>
+    <!-- Define o título da página que será exibido na aba do navegador -->
+
     <link rel="stylesheet" href="index.css">
+    <!-- Importa o arquivo de estilos CSS para estilizar a página -->
 </head>
+
 <body>
     <header>
         <input type="text" id="busca" placeholder="Pesquisar por título">
+        <!-- Campo de entrada de texto para permitir a pesquisa de tarefas pelo título -->
     </header>
+
     <main>
         <section id="tarefas">
             <h2>
                 Tarefas 
                 <button onclick="abrirModal()">Nova tarefa</button>
+                <!-- Botão que abre o modal para criar uma nova tarefa ao chamar a função `abrirModal()` -->
             </h2>
-            <!-- <h6>Nenhuma tarefa registrada</h6> -->
-             <ul id="lista"></ul>
+            <!-- Cabeçalho da seção de tarefas com um botão para adicionar novas tarefas -->
 
+            <!-- <h6>Nenhuma tarefa registrada</h6> -->
+            <!-- Comentário de um elemento que pode ser usado para exibir uma mensagem quando não há tarefas -->
+
+            <ul id="lista"></ul>
+            <!-- Lista não ordenada onde as tarefas serão exibidas dinamicamente -->
         </section>
+
         <section id="overlay" onclick="fecharModal()"></section>
-        </section>
+        <!-- Elemento de sobreposição que cobre a tela e fecha o modal ao ser clicado -->
+
         <div id="criarTarefa" class="modal">
+            <!-- Modal para criar uma nova tarefa -->
             <form onsubmit="novaTarefa()">
-                <h3>Criar Tarefa <box-icon name='x' size="md" onclick="fecharModal()"></box-icon></h3>
+                <!-- Formulário que chama a função `novaTarefa()` ao ser enviado -->
+
+                <h3>
+                    Criar Tarefa 
+                    <box-icon name='x' size="md" onclick="fecharModal()"></box-icon>
+                    <!-- Ícone de fechar que chama a função `fecharModal()` para fechar o modal -->
+                </h3>
+
                 <label for="titulo">Título</label>
+                <!-- Rótulo para o campo de entrada do título da tarefa -->
+
                 <input type="text" id="titulo" required>
+                <!-- Campo de entrada para o título da tarefa, obrigatório para envio -->
+
                 <label for="descricao">Descrição</label>
+                <!-- Rótulo para o campo de entrada da descrição da tarefa -->
+
                 <textarea id="descricao" required></textarea>
+                <!-- Área de texto para a descrição da tarefa, obrigatória para envio -->
+
                 <button>Criar</button>
+                <!-- Botão para enviar o formulário e criar a nova tarefa -->
             </form>
         </div>
     </main>
+
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Importa a biblioteca de ícones Boxicons para uso de ícones na página -->
+
     <script src="index.js"></script>
+    <!-- Importa o arquivo JavaScript que contém as funcionalidades da página -->
 </body>
 </html>
