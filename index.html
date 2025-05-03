@@ -14,46 +14,21 @@
         <section id="tarefas">
             <h2>
                 Tarefas 
-                <button onclick="novaTarefa()">Nova tarefa</button>
+                <button onclick="abrirModal()">Nova tarefa</button>
             </h2>
             <!-- <h6>Nenhuma tarefa registrada</h6> -->
-             <ul id="lista">
-                <li>
-                    <h5>Título da Tarefa</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque, nostrum harum, in repellat unde voluptates aut numquam excepturi tempora velit. Provident aliquam dolorem dignissimos quas possimus velit cum ut.</p>
-                    <div class="actions">
-                        <box-icon name='trash' size="sm"></box-icon>
-                    </div>
-                    
-                </li>
-                <li>
-                    <h5>Título da Tarefa</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque, nostrum harum, in repellat unde voluptates aut numquam excepturi tempora velit. Provident aliquam dolorem dignissimos quas possimus velit cum ut.</p>
-                </li>
-                <li>
-                    <h5>Título da Tarefa</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque, nostrum harum, in repellat unde voluptates aut numquam excepturi tempora velit. Provident aliquam dolorem dignissimos quas possimus velit cum ut.</p>
-                </li>
-                <li>
-                    <h5>Título da Tarefa</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque, nostrum harum, in repellat unde voluptates aut numquam excepturi tempora velit. Provident aliquam dolorem dignissimos quas possimus velit cum ut.</p>
-                </li>
-                <li>
-                    <h5>Título da Tarefa</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque, nostrum harum, in repellat unde voluptates aut numquam excepturi tempora velit. Provident aliquam dolorem dignissimos quas possimus velit cum ut.</p>
-                </li>
-             </ul>
+             <ul id="lista"></ul>
 
         </section>
         <section id="overlay" onclick="fecharModal()"></section>
         </section>
         <div id="criarTarefa" class="modal">
-            <form>
+            <form onsubmit="novaTarefa()">
                 <h3>Criar Tarefa <box-icon name='x' size="md" onclick="fecharModal()"></box-icon></h3>
                 <label for="titulo">Título</label>
-                <input type="text" id="titulo">
+                <input type="text" id="titulo" required>
                 <label for="descricao">Descrição</label>
-                <textarea id="descricao"></textarea>
+                <textarea id="descricao" required></textarea>
                 <button>Criar</button>
             </form>
         </div>

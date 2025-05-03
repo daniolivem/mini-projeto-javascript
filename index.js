@@ -1,4 +1,4 @@
-function novaTarefa() {
+function abrirModal() {
     overlay.classList.add('active')
     criarTarefa.classList.add('active')
 }
@@ -14,7 +14,7 @@ function buscarTarefas() {
         .then(res =>{
             inserirTarefas(res);
         })
-} buscarTarefas()
+} buscarTarefas();
 
 function inserirTarefas(listaDeTarefas) {
    if(listaDeTarefas.length > 0){
@@ -29,4 +29,30 @@ function inserirTarefas(listaDeTarefas) {
                 </li>`;
         })
    } 
+}
+
+function novaTarefa(){
+    event.preventDefault();
+
+    let tarefa = {
+        titulo: titulo.value,
+        descricao: descricao.value
+    }
+
+    fetch('http://localhost:3000/tarefas', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(tarefa)
+    })
+    .then(res => res.json())
+    .then(res => {
+        fecharModal();
+        buscarTarefas();
+    })
+} 
+
+function deletarTarefa() {
+    fetch()
 }
