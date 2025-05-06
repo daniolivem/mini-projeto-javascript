@@ -75,6 +75,11 @@ header input {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: initial;
+}
+
+#tarefas ul li.hidden {
+    display: none;
 }
 
 #tarefas ul li h5 {

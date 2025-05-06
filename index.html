@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <input type="text" id="busca" placeholder="Pesquisar por título">
+        <input type="text" id="busca" onkeyup="pesquisarTarefa()" placeholder="Pesquisar por título">
         <!-- Campo de entrada de texto para permitir a pesquisa de tarefas pelo título -->
     </header>
 
@@ -31,8 +31,7 @@
             </h2>
             <!-- Cabeçalho da seção de tarefas com um botão para adicionar novas tarefas -->
 
-            <!-- <h6>Nenhuma tarefa registrada</h6> -->
-            <!-- Comentário de um elemento que pode ser usado para exibir uma mensagem quando não há tarefas -->
+            
 
             <ul id="lista"></ul>
             <!-- Lista não ordenada onde as tarefas serão exibidas dinamicamente -->

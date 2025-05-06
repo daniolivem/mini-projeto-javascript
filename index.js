@@ -66,4 +66,17 @@ function deletarTarefa(id) {
     })
 }
 
-
+function pesquisarTarefa() {
+    let lis =  document.querySelectorAll('ul li');
+    if(busca.value.length > 0) {
+        lis.forEach(li => {
+            if(!li.children[1].innerText.includes(busca.value)){
+                li.classList.add('hidden');
+            } else {
+                li.classList.remove('hidden');
+            }
+        })
+    } else { 
+        
+    }
+}
