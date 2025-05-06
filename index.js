@@ -25,7 +25,7 @@ function inserirTarefas(listaDeTarefas) {
                     <h5>${tarefa.titulo}</h5>
                     <p>${tarefa.descricao}</p>
                     <div class="actions">
-                        <box-icon name='trash' size="sm" onclick="deletarTarefa(${tarefa.id})"></box-icon>
+                        <box-icon name='trash' size="sm" onclick="deletarTarefa('${tarefa.id}')"></box-icon>
                     </div>
                 </li>
             `;
