@@ -1,9 +1,3 @@
 {
-  "tarefas": [
-    {
-      "titulo": "tarefa 1",
-      "descricao": "aaaa",
-      "id": 1
-    }
-  ]
+  "tarefas": []
 }
