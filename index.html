@@ -14,11 +14,18 @@
 
     <link rel="stylesheet" href="index.css">
     <!-- Importa o arquivo de estilos CSS para estilizar a página -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+        </style>
 </head>
 
 <body>
     <header>
-        <input type="text" id="busca" onkeyup="pesquisarTarefa()" placeholder="Pesquisar por título">
+        <div style="display: flex; align-items: center; position: relative;">
+            <input type="text" id="busca" onkeyup="pesquisarTarefa()" placeholder="&#x1F50D; Pesquisar por título" style="flex: 1; padding-left: 24px;">
+            <!-- Campo de entrada de texto para pesquisa de tarefas, com ícone de lupa no placeholder -->
+        </div>
         <!-- Campo de entrada de texto para permitir a pesquisa de tarefas pelo título -->
     </header>
 
@@ -62,6 +69,8 @@
 
                 <textarea id="descricao" required></textarea>
                 <!-- Área de texto para a descrição da tarefa, obrigatória para envio -->
+                 
+                 
 
                 <button>Criar</button>
                 <!-- Botão para enviar o formulário e criar a nova tarefa -->

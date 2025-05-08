@@ -4,13 +4,16 @@
     list-style: none;
     text-decoration: none;
     outline: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
 }
 
 body {
     background-color: #efefefef;
+    
     
 }
 
@@ -25,8 +28,18 @@ header input {
     padding: 0 10px;
     border-radius: 8px;
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #666;
+    line-height: 1.5;
 }
 
+
+header input:focus {
+    border: 2px solid #d37186;
+    transition-duration: 200ms;
+}
 #tarefas {
     padding: 60px 120px;
 }
@@ -35,14 +48,15 @@ header input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 48px;
+    font-size: 58px;
+        
 }
 
 #tarefas h2 button {
     height: 46px;
     background-color: #DCB3D2;
     color: whitesmoke;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: .75px;
@@ -50,16 +64,19 @@ header input {
     border-radius: 6px;
     cursor: pointer;
     transition-duration: 200ms;
+    
 }
 
 #tarefas h2 button:hover {
-    background-color: #AAAEDB;
+    background-color: #d37186;
 }
 
 #tarefas h6 {
     text-align: center;
     font-size: 24px;
     color: #999;
+    
+   
 }
 
 #tarefas ul {
@@ -76,6 +93,7 @@ header input {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(152, 122, 236, 0.3);
     display: initial;
+    
 }
 
 #tarefas ul li.hidden {
@@ -83,9 +101,21 @@ header input {
 }
 
 #tarefas ul li h5 {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 16px;
+    
 }
+#tarefas ul li p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;}
+
 
 #tarefas ul li .actions {
     display: flex;
@@ -130,6 +160,7 @@ header input {
     visibility: hidden;
     opacity: 0;
     transition-duration: 200ms;
+    
 }
 
 .modal.active {
@@ -141,9 +172,10 @@ header input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 24px;
-    color: #d37186;
+    font-size: 34px;
+    color: #fceaf7;
     margin-bottom: 26px;
+    
 }
 
 .modal form h3 box-icon {
@@ -157,11 +189,13 @@ header input {
 
 .modal form label {
     display: block;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     letter-spacing: .75px;
     text-transform: uppercase;
     margin-bottom: 6px;
+    
+   
 }
 
 .modal form input,
@@ -173,6 +207,12 @@ header input {
     margin-bottom: 16px;
     padding-left: 10px;
     transition-duration: 200ms;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #666;
+    line-height: 1.5;
 }
 
 .modal form input:focus,
@@ -190,7 +230,7 @@ header input {
     height: 46px;
     background-color: #DCB3D2;
     color: white;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: .75px;
@@ -198,6 +238,7 @@ header input {
     border-radius: 6px;
     cursor: pointer;
     transition-duration: 200ms;
+   
 }
 
 .modal form button:hover {
@@ -206,3 +247,16 @@ header input {
     color: white;
     border: 2px solid #999;
 }
+
+/* Estilização da Data e Hora */
+/* Estilização da Data e Hora */
+.tarefa-data-hora {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-top: 8px;
+    text-align: right;
+}
+
+
